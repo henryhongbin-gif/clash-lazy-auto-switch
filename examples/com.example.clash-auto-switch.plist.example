@@ -4,46 +4,35 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.user.clash-auto-switch</string>
+  <string>com.example.clash-auto-switch</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/YOUR_USER/Library/Application Support/clash-auto-switch</string>
 
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/python3</string>
-    <string>/Users/YOUR_USER/Library/Application Support/clash-auto-switch/clash_auto_switch.py</string>
-    <string>--socket</string>
-    <string>/tmp/verge/verge-mihomo.sock</string>
-    <string>--secret</string>
-    <string>YOUR_SECRET</string>
-    <string>--group</string>
-    <string>GLOBAL</string>
-    <string>--threshold</string>
-    <string>200</string>
-    <string>--hard-threshold</string>
-    <string>300</string>
-    <string>--interval</string>
-    <string>3</string>
-    <string>--timeout-ms</string>
-    <string>800</string>
-    <string>--stable-samples</string>
-    <string>1</string>
-    <string>--ideal-max-delay</string>
-    <string>300</string>
-    <string>--safe-max-delay</string>
-    <string>400</string>
-    <string>--provider-refresh-interval</string>
-    <string>1800</string>
+    <string>-m</string>
+    <string>clash_auto_switch.main</string>
   </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>CLASH_SOCKET</key>
+    <string>/tmp/verge/verge-mihomo.sock</string>
+    <key>CLASH_SECRET</key>
+    <string>YOUR_SECRET</string>
+    <key>CLASH_GROUP</key>
+    <string>GLOBAL</string>
+    <key>BACKUP_REGIONS</key>
+    <string>日本,台湾,美国</string>
+  </dict>
 
   <key>RunAtLoad</key>
   <true/>
 
   <key>KeepAlive</key>
   <true/>
-
-  <key>StandardOutPath</key>
-  <string>/tmp/clash-auto-switch.out.log</string>
-
-  <key>StandardErrorPath</key>
-  <string>/tmp/clash-auto-switch.err.log</string>
 </dict>
 </plist>
+
