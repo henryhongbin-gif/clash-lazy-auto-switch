@@ -1,24 +1,16 @@
-# Real Clash / Mihomo configs
-clash-verge.yaml
-config.yaml
-*.yaml
-*.yml
-
-# Secrets and local env
 .env
 *.env
-!.gitignore
-!examples/config.example.env
+!.env.example
 
-# Logs
 *.log
-clash-auto-switch.out.log
-clash-auto-switch.err.log
-
-# Python
 __pycache__/
 *.pyc
-
-# macOS
+.pytest_cache/
 .DS_Store
+
+# Real Clash / Mihomo configs may contain subscription URLs and nodes.
+*.yaml
+*.yml
+!examples/*.yaml
+!examples/*.yml
 
